@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'Nunito Sans';
     src: url('../font/Nunito-Variable.woff2') format('woff2 supports variations'),
@@ -53,6 +57,10 @@ body {
     margin: 0 auto;
 }
 
+.menu__btn {
+    display: none;
+}
+
 .container-big {
     max-width: 1820px;
     margin: 0 auto;
@@ -83,6 +91,17 @@ body {
     background-color: #0E0D0D;
     border-radius: 50px;
     color: #fff;
+    transition: 0.4s;
+}
+
+.header__contacts:hover {
+    background-color: #F2A531;
+    transform: translateY(-5%);
+}
+
+.button:hover {
+    background-color: #F2A531;
+    transform: translateY(-5%);
 }
 
 .about {
@@ -322,6 +341,7 @@ body {
     position: relative;
     color: #fff;
     border-radius: 96px;
+    transition: 0.5s;
 }
 
 .products__link {
@@ -518,6 +538,7 @@ body {
     font-weight: 500;
     color: #101828;
     position: relative;
+    padding-right: 30px;
 }
 
 .blog__item-text {
@@ -555,6 +576,7 @@ body {
     justify-content: space-between;
     margin-bottom: 30px;
     padding-right: 100px;
+    gap: 20px;
 }
 
 .footer__element-title {
@@ -570,3 +592,342 @@ body {
 .footer__item-address {
     font-style: normal;
 }
+
+@media(max-width: 1600px) {
+    .container-big {
+        padding: 0;
+    }
+
+    .slogan__title {
+        font-size: 140px;
+    }
+
+    .slogan__text {
+        font-size: 26px;
+    }
+
+    .slogan__img {
+        margin-top: -75px;
+    }
+}
+
+@media(max-width: 1280px) {
+    .about__title {
+        font-size: 140px;
+    }
+
+    .about__achievements {
+        gap: 20px;
+    }
+
+    .about__progress-box {
+        gap: 0 20px;
+    }
+
+    .partners__inner {
+        gap: 20px;
+    }
+
+    .blog__items {
+        gap: 20px;
+        grid-template-columns: 380px auto;
+    }
+
+    .partners__info {
+        max-width: 350px;
+    }
+}
+
+@media(max-width: 1048px) {
+    .blog__items {
+        grid-template-columns: 1fr;
+    }
+
+    .blog__item-titlelink {
+        max-width: 580px;
+    }
+
+    .blog__item-img {
+        width: 100%;
+    }
+}
+
+@media(max-width: 980px) {
+    .about__text {
+        font-size: 24px;
+    }
+
+    .about__title {
+        font-size: 100px;
+    }
+
+    .about__achievement {
+        flex-wrap: wrap;
+    }
+
+    .about__stats {
+        gap: 20px;
+    }
+
+    .partners__inner {
+        flex-wrap: wrap;
+    }
+
+    .partners__info {
+        max-width: 100%;
+    }
+
+    .partners__box {
+        width: 100%;
+    }
+
+
+    .menu__btn {
+        display: flex;
+        width: 40px;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        position: relative;
+        z-index: 5;
+    }
+
+    .menu__btn span {
+        width: 100%;
+        height: 3px;
+        background-color: #000;
+    }
+
+    .menu {
+        order: 1;
+    }
+
+    .menu__list {
+        position: absolute;
+        left: 0;
+        right: 0;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 95px 0;
+        gap: 20px 0;
+        top: 0;
+        transform: translateY(-100%);
+        transition: transform .5s ease;
+    }
+
+    .menu__list.menu--active {
+        transform: translateY(0);
+    }
+}
+
+@media(max-width: 870px) {
+    .about__progress-text {
+        font-size: 28px;
+    }
+
+    .about__progress-box {
+        flex-wrap: wrap;
+    }
+
+    .about__progress-img {
+        width: 100%;
+        height: 340px;
+        object-fit: cover;
+    }
+    
+    .about__stats {
+        flex-wrap: wrap;
+    }
+
+    .products__list {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .slogan__title {
+        font-size: 64px;
+    }
+
+    .slogan__img {
+        margin-top: -35px;
+    }
+
+    .footer__top {
+        padding-right: 0;
+    }
+}
+
+@media(max-width: 790px) {
+    .footer__top {
+        flex-wrap: wrap;
+    }
+
+    .footer__logo {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 678px) {
+    .about__stats-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .blog__item-small {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .partners__box-text {
+        padding: 20px;
+    }
+
+    .partners__box-top {
+        flex-wrap: wrap;
+    }
+
+    .partners__box-top img {
+        width: 100%;
+    }
+
+    .partners__box-list {
+        margin-top: 120px;
+    }
+}
+
+@media(max-width: 560px) {
+    .footer__element {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .footer__bottom {
+        display: block;
+    }
+
+    .footer__bottom-item {
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width: 510px) {
+    .about__achievements {
+        flex-wrap: wrap;
+    }
+
+    .about__title {
+        font-size: 64px;
+    }
+
+    .about__text {
+        font-size: 18px;
+    }
+
+    .about__achievement-img {
+        width: 100%;
+    }
+
+    .about__achievement-imgbox {
+        min-width: 100%;
+    }
+
+    .about__top {
+        min-height: 440px;
+    }
+
+    .about__achievements {
+        margin-bottom: 30px;
+    }
+
+    .about__stats {
+        margin-bottom: 30px;
+    }
+
+    .about {
+        margin-bottom: 50px;
+    }
+
+    .about__progress-item {
+        display: block;
+    }
+
+    .about__progress-item dd {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .products__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .product__item-title {
+        font-size: 24px;
+    }
+
+    .products__title {
+        font-size: 24px;
+    }
+
+    .slogan {
+        padding-top: 30px;
+    }
+
+    .slogan__text {
+        font-size: 18px;
+    }
+
+    .partners {
+        padding: 50px 0;
+    }
+
+    .partners__info-title {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .blog__wrapper {
+        padding: 50px 0;
+    }
+
+    .blog__title {
+        font-size: 28px;
+    }
+
+    .partners__box-list {
+        padding-left: 0;
+    }
+
+    .footer {
+        padding: 50px 0;
+    }
+
+    .header__inner {
+        flex-wrap: wrap;
+        gap: 20px 60px;
+    }
+
+    .menu {
+        order: 0;
+    }
+
+    .header__contacts {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* модалочка */
